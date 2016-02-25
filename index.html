@@ -28,22 +28,23 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
+      background-color: #333;
       }
 
       li {
-      float: right;
+      float: left;
       }
-  
+
       li a, .dropbtn {
       display: inline-block;
       color: white;
       text-align: center;
       padding: 14px 16px;
-      text-decoration: none;  
+      text-decoration: none;
       }
 
       li a:hover, .dropdown:hover .dropbtn {
-      background-color: red;
+      background-color: grey;
       }
 
       li.dropdown {
@@ -71,10 +72,23 @@
       .dropdown:hover .dropdown-content {
       display: block;
       }
-</style>
+    </style>
   </head>
   
   <body>
+    <ul>
+      <li><a class="active" href="http://stevenaziz2000.github.io">InTech</a></li>
+      <li><a href="http://stevenaziz2000.github.io/about.html">About Us</a></li>
+      <li class="dropdown">
+      <a href="#" class="dropbtn">My Group's Websites</a>
+      <div class="dropdown-content">
+      <a href="http://crazyalli64.github.io">Allison's website</a>
+      <a href="http://obsidianowl.github.io/">Megumi's website</a>
+      <a href="http://little-welch.github.io">Bryant's website</a>
+      </div>
+      </li>
+    </ul>
+    
     <div id="rectangle" style="width:100%; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; background-color:orange;"><h1 style="font-family: helvetica; color: white; font-size: 50px;"> InTech <a href="http://stevenaziz2000.github.io/about.html" style="text-align: right; font-size: 25px; font-family: helvetica; color: white;">About</a><div class="dropdown">
     <button class="dropbtn">My Group's Websites</button>
     <div class="dropdown-content">
