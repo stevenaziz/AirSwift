@@ -5,9 +5,6 @@
     <title>InTech</title>
     <link rel="shortcut icon" href="stevenaziz2000.github.io/stylesheets/InTech.Logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-      var x = window.innerWidth; 
-    </script>
     <style>
       ul {
       list-style-type: none;
@@ -54,8 +51,8 @@
   </head>
   
   <body style="margin: 0px; padding: 0px;" id="body">
-    <script>
-      document.getElementById("body").style.width = windowWidth;
+  <script>
+      var x = window.innerWidth; 
     </script>
     <ul>
       <li><a class="active" href="http://stevenaziz2000.github.io"><img src="stevenaziz2000.github.io/stylesheets/InTech.Logo.png" alt="InTech" style="width: 63px; height: 60px; padding: 0px; margin: 0px;" id="inTech"></a></li>
@@ -86,11 +83,11 @@
 
     <script>
       if (x < 749) {
-      document.getElementById("title").style.font = 40;
-      document.getElementById("title2").style.font = 18;
+      document.getElementById("title").style.fontSize = 40;
+      document.getElementById("title2").style.fontSize = 18;
       } else {
-      document.getElementById("title").style.font = 80;
-      document.getElementById("title2").style.font = 35;
+      document.getElementById("title").style.fontSize = 80;
+      document.getElementById("title2").style.fontSize = 35;
       }
     </script>
     
