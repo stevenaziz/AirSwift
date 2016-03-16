@@ -69,25 +69,23 @@
       </ul>
     </ul>
     
-    <h1 style="font-family: helvetica; font-size: 40px; color: rgb(40, 40, 40);"> Testing</h1>
+    <h1 style="font-family: helvetica; font-size: 40px; color: rgb(40, 40, 40); marging: 30px 0px 0px 30px;"> Testing</h1>
     
-    <div style="background-color: rgb(120,120,120); margin: 50px 30px 0px 30px; border-style: none; padding: 0px; width: 1280px; height: 720px;">
-    <p id="mC"></p>
+    <div style="background-color: rgb(200,200,200); margin: 50px 30px 0px 30px; border-style: none; padding: 0px; width: 95%; height: 720px; float: left;">
+    <p id="mC" style="font-size: 20px; font-family: helvetica; color: black;"></p>
+    <button id=mCButon>Click me to get the coordinates of the mouse</button>
+    </div>
+    
     <script>
     function mouseCoordinates() {
     var mX = event.clientX;
-    var mY = event.clienty;
-    document.getEelementById("mC").innerHTML = "mouse coordinates (" + mX + "," + mY + ")";
+    var mY = event.clientY;
+    var myFunction = document.getEelementById("mC").innerHTML = "mouse coordinates (" + mX + "," + mY + ")";
+    //o
     }
     //button.onclick=function(){myScript};
     </script>
-    </div>
-    
-    
-    
-    
-    
-    
+
       <div style="width: 100%; height: 50px; border-style: none; background-color: rgb(40, 40, 40); margin: 70px 0px 30px 0px; padding: 0px; float: left;"><h4 style="padding: 22px 0px 22px 11px; font-size: 16px; font-family: helvetica; color: white; text-align: left; margin: 0px; border-style: none;">copyright &copy; 2016 InTech Inc. All rights reserved.</h4></div>
   </body>
    
