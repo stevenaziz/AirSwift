@@ -12,6 +12,16 @@
       var x = window.innerWidth; 
     </script>
     
+     <script>
+    function passwordCheck() {
+    if (document.getElementById("password") != "AESLM") {
+      document.getElementById("error").innerHTML = "The password you entered does not match the password on our database. Please try again.";
+    } else {
+      window.location = "http://stevenaziz2000.github.io/home.html";
+    }
+    }
+  </script>
+  
     <div style="background-color: rgb(170, 170, 170); margin: auto; position: relative; top: 200px; border: 3px solid rgb(40, 40, 40); padding: 10px; width: 350px; height: 150px;">
       <h1 style="font-family: helvetica; font-size: 15px; color: black;">You must enter the password to enter this site</h1>
       
@@ -20,15 +30,6 @@
       <p id="error"></p>    
     </div>
   
-  <script>
-    function passwordCheck() {
-    if (password != "AESLM") {
-      document.getElementById("error").innerHTML = "The password you entered does not match the password on our database. Please try again.";
-    } else {
-      window.location = "http://stevenaziz2000.github.io/home.html";
-    }
-    }
-  </script>
   </body>
    
 </html>
