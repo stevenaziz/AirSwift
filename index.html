@@ -7,22 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   
-  <body style="margin: 0px; padding: 0px; background-color: rgb(210, 210, 210); height: 643px;" id="body">
-    <script>
-      var x = window.innerWidth; 
-    </script>
+  <body style="margin: 0px; padding: 0px; background-color: rgb(210, 210, 210);">
     
-     <script>
-    function passwordCheck() {
-    if (document.getElementById("password").value != "AESLM") {
-      document.getElementById("error").innerHTML = "The password you entered does not match the password on our database. Please try again.";
-    } else {
-      window.location = "http://stevenaziz2000.github.io/home.html";
-    }
-    }
-  </script>
-  
-    <div style="background-color: rgb(170, 170, 170); margin: auto; position: relative; top: 200px; border: 3px solid rgb(40, 40, 40); padding: 10px; width: 350px; height: 150px;">
+    <div id="secure" style="background-color: rgb(170, 170, 170); margin: auto; position: relative; top: 200px; border: 3px solid rgb(40, 40, 40); padding: 10px; width: 340px; height: 100px;">
       <h1 style="font-family: helvetica; font-size: 15px; color: black;">You must enter the password to enter this site</h1>
       
       <form onsubmit="passwordCheck()">Password: <input type="text" id="password" name="password"> <input type="submit" value="Submit"></form>
@@ -30,6 +17,16 @@
       <p id="error"></p>    
     </div>
   
+   <script>
+    function passwordCheck() {
+    if (document.getElementById("password").value != "AESLM") {
+      document.getElementById("secure").style.height = "130";
+      document.getElementById("error").innerHTML = "The password you entered does not match the password on our database. Please try again.";
+    } else {
+      window.location = "http://stevenaziz2000.github.io/home.html";
+    }
+    }
+  </script>
   </body>
    
 </html>
