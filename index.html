@@ -14,7 +14,7 @@
     
      <script>
     function passwordCheck() {
-    if (document.getElementById("password") != "AESLM") {
+    if (document.getElementById("password").value != "AESLM") {
       document.getElementById("error").innerHTML = "The password you entered does not match the password on our database. Please try again.";
     } else {
       window.location = "http://stevenaziz2000.github.io/home.html";
