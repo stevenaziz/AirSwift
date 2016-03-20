@@ -48,9 +48,17 @@
       display: block;
       }
     </style>
+     <script>
+      function getCookie() {
+        if (document.cookie.indexOf("InTech=") == -1) {
+           window.location = "http://stevenaziz2000.github.io/";
+         } else {
+        }
+      }
+    </script>
   </head>
   
-  <body style="margin: 0px; padding: 0px;" id="body">
+  <body onload="getCookie()" style="margin: 0px; padding: 0px;" id="body">
   <script>
       var x = window.innerWidth; 
     </script>
