@@ -16,9 +16,9 @@
   </head>
   
   <body onload="getCookie()" style="margin: 0px; padding: 0px; background: linear-gradient(to right, rgba(255,0,0,0.6), rgba(255,128,0,0.6));">
-    <h1 style="font-family: helvetica; font-size: 30px; color: white; font-weight: 100; text-align: center; opacity: 0.75; margin: 15px 0px 45px 0px;"
+    <h1 style="font-family: helvetica; font-size: 30px; color: white; font-weight: 100; text-align: center; opacity: 0.75; margin: 15px 0px 45px 0px;">Welcome to AirSwift!</h1>
     <div id="secureLogin" style="background-color: rgba(255, 255, 255, 0.75); margin: auto; position: relative; top: 200px; border-style: none; padding: 12px; width: 340px; height: 100px;">
-      <h1 style="font-family: helvetica; font-size: 15px; color: black;">You must enter the password to enter this site</h1>
+      <h1 style="font-family: helvetica; font-size: 15px; color: black;">Please enter the password in order to enter the site</h1>
       
       <form method="post" oninput="passwordCheck()">Password: <input type="password" id="passwordInput" name="passwordInput"></form>
       
@@ -29,7 +29,7 @@
     function passwordCheck() {
     if (document.getElementById("passwordInput").value != "AESLM") {
       document.getElementById("secureLogin").style.height = "130px";
-      document.getElementById("errorMessage").innerHTML = "The password you entered does not match the password on our database. Please try again.";
+      document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
     } else {
       document.cookie = "AirSwiftCookie=Authorized";
       window.location = "http://stevenaziz2000.github.io/home.html";
