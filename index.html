@@ -13,6 +13,15 @@
         }
       }
        var kc = event.KeyCode;
+       function passwordCheck() {
+    if (document.getElementById("passwordInput").value != "AESLM") {
+      document.getElementById("secureLogin").style.height = "130px";
+      document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
+    } else {
+      document.cookie = "AirSwiftCookie=Authorized";
+      window.location = "http://stevenaziz2000.github.io/home.html";
+    }
+    }
     </script>
     <style>
       @font-face {
@@ -33,15 +42,6 @@
     </div>
   
    <script>
-    function passwordCheck() {
-    if (document.getElementById("passwordInput").value != "AESLM") {
-      document.getElementById("secureLogin").style.height = "130px";
-      document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
-    } else {
-      document.cookie = "AirSwiftCookie=Authorized";
-      window.location = "http://stevenaziz2000.github.io/home.html";
-    }
-    }
     /*function enterCheck() {
       if (x = 13) {
         //passwordCheck();
