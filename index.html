@@ -12,6 +12,7 @@
            window.location = "http://stevenaziz2000.github.io/home.html";
         }
       }
+       var kc = event.KeyCode;
     </script>
   </head>
   
@@ -20,7 +21,7 @@
     <div id="secureLogin" style="background-color: rgba(255, 255, 255, 0.75); margin: auto; position: relative; top: 100px; border-style: none; padding: 12px; width: 300px; height: 100px;">
       <h1 style="font-family: helvetica; font-size: 15px; color: black;">Please login</h1>
       
-      <form method="post"><h1 style="font-family: helvetica; font-size: 12px; color: black; font-weight: 100;">Password: </h1><input type="password" maxlength="24" size="24" autofocus placeholder="eg. smartcat45" id="passwordInput" name="passwordInput"><button type="button" onclick="passwordCheck()">Submit</button></form>
+      <form method="post"><h1 style="font-family: helvetica; font-size: 12px; color: black; font-weight: 100;">Password: </h1><input type="password" maxlength="24" size="24" autofocus placeholder="eg. smartcat45" id="passwordInput" name="passwordInput" onkeydown="enterCheck()"><button type="button" onclick="passwordCheck()">Submit</button></form>
       
       <p id="errorMessage"></p>    
     </div>
@@ -34,6 +35,13 @@
       document.cookie = "AirSwiftCookie=Authorized";
       window.location = "http://stevenaziz2000.github.io/home.html";
     }
+    }
+    function enterCheck() {
+      if (x = 13) {
+        passwordCheck();
+      } else {
+      }
+      }
     }
   </script>
   </body>
