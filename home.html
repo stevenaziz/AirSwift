@@ -59,6 +59,12 @@
         }
       }
     </script>
+    <script>
+      function logout() {
+        document.cookie = "AirSwiftCookie=Unauthorized";
+        window.location = "http://stevenaziz2000.github.io/";
+      }
+    </script>
   </head>
   
   <body onload="getCookie()" style="margin: 0px; padding: 0px;" onresize="resize()" id="body">
@@ -78,6 +84,7 @@
       </div>
       </li>
       <li><a href="http://stevenaziz2000.github.io/about-us.html"><h1 style="font-family: helvetica; color: white; font-size: 15px; margin: 0px; padding: 15px 12px 0px 12px;">About Us</h1></a></li>
+      <li><a href="#" onclick="logout()"><h1 style="font-family: helvetica; color: white; font-size: 15px; margin: 0px; padding: 15px 12px 0px 12px;">Logout</h1></a></li>
       </ul>
     </ul>
     
