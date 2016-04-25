@@ -22,6 +22,9 @@
           window.location = "http://stevenaziz2000.github.io/home.html";
         }
       }
+      function refresh() {
+        window.location = "http://stevenaziz2000.github.io";
+      }
     </script>
     <style>
       @font-face {
@@ -31,14 +34,14 @@
     </style>
   </head>
   
-  <body onload="getCookie()" onerror="getCookie()" style="margin: 0px; padding: 0px; background: linear-gradient(to right, rgba(255, 32, 0, 1), rgba(255, 176,0, 1));">
+  <body onload="getCookie()" onbeforeunload="refresh()" style="margin: 0px; padding: 0px; background: linear-gradient(to right, rgba(255, 32, 0, 1), rgba(255, 176,0, 1));">
     
     <h1 style="font-family: myriad pro light, helvetica; font-size: 60px; color: white; font-weight: 100; text-align: center; opacity: 0.95; margin: 45px 0px 15px 0px;">Welcome to AirSwift!</h1>
       
     <div id="secureLogin" style="background-color: rgba(255, 255, 255, 0.75); margin: 100px auto 50px auto; border-style: none; padding: 12px; width: 300px; height: 100px;">
       <h1 style="font-family: myriad pro light, helvetica; font-size: 15px; color: black;">Please login</h1>
       <h1 style="font-family: myriad pro light, helvetica; font-size: 12px; color: black; font-weight: 100;">Password: </h1> 
-      <form method="post" novalidate target="_blank" name="login">
+      <form method="post" novalidate name="login">
        <input type="password" autocomplete="on" required maxlength="24" size="24" autofocus placeholder="e.g. smartcat45" id="passwordInput" name="passwordInput">
        <input type="submit" value="Submit" onsubmit="passwordCheck()">
       </form>
