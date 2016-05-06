@@ -14,7 +14,7 @@
       }
       function passwordCheck() {
         if (document.getElementById("passwordInput").value != "AESLM") {
-          document.getElementById("secureLogin").style.height = "130px";
+          document.getElementById("secureLogin").style.height = "150px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
         } else {
           document.cookie = "AirSwiftCookie=Authorized";
