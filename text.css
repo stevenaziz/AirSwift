@@ -1,12 +1,22 @@
 @font-face {
 font-family: 'Myriad Pro Light';
-src: url('/fonts/MyriadPro-Light.otf');
+src: url('/stylesheets/Myriad Pro Light.otf');
 }
 .text {
-font-family:'Myriad Pro Light', Arial;
-font-size:60px;
-color: white;
-font-weight:100; 
-text-align:center;
-text-decoration:none;
+font-family:'Myriad Pro Light', Helvetica;
+font-weight:100;
 }
+/*
+font-family
+font-weight
+font-color
+font-size
+text-align
+text-decoration
+text-transform
+text-indent
+letter-spacing
+line-height
+text-direction
+word-spacing
+*/
