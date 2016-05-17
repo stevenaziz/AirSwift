@@ -20,8 +20,11 @@
           document.cookie = "AirSwiftCookie=Authorized";
           document.getElementById("loadingToHome").style.opacity = 0.9;
           document.getElementById("loading").style.opacity = 1;
-          setTimeout(window.location = "http://stevenaziz2000.github.io/home.html", 3000);
+          setTimeout(windowChange, 3000);
         }
+      }
+      function windowChange() {
+        window.location = "http://stevenaziz2000.github.io/home.html";
       }
     </script>
     <style>
