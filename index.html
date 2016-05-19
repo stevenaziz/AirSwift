@@ -12,6 +12,12 @@
           window.location = "http://stevenaziz2000.github.io/home.html";
           }
       }
+      function metaWindow() {
+        var x = window.innerWidth;
+        var y = window.innerHeight;
+        document.getElementById("loader").style.top = (y/2)-60 + "px";
+        document.getElementById("loader").style.left = (x/2)-60 + "px";
+      }
       function passwordCheck() {
         if (document.getElementById("passwordInput").value != "AESLM") {
           document.getElementById("secureLogin").style.height = "150px";
@@ -43,7 +49,7 @@
     </style>
   </head>
   
-  <body onload="getCookie()" style="margin: 0px; padding: 0px;">
+  <body onload="getCookie(); metaWindow();" style="margin: 0px; padding: 0px;">
     <div id="loadingToHome" style="background-color: black; position: absolute; top: 0px; left: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; border-style: none; padding: 0px; opacity: 0.85;"></div>
     <div id="loading" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 2; opacity: 1;">
     <style>
@@ -67,7 +73,7 @@
   100% { transform: rotate(360deg); }
 }
 </style>
-<div id="loader" style='position: relative; top: 50%; left: 50%; margin: 0px; border-style: none; padding: 0px; opacity: 1;' class="loader"></div>
+<div id="loader" style='position: relative; top: 0px; left: 0px; margin: 0px; border-style: none; padding: 0px; opacity: 1;' class="loader"></div>
 </div>
 <div style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 3; opacity: 1; background: linear-gradient(to right, rgba(255, 32, 0, 1) 0%, rgba(255, 68, 0, 1) 25%, rgba(255, 104, 0, 1) 50%, rgba(255, 140, 0, 1) 75%, rgba(255, 176,0, 1) 100%);">
     <h1 style="font-family: myriad pro light, helvetica; font-size: 60px; color: white; font-weight: 100; text-align: center; opacity: 0.95; margin: 30px 0px 15px 0px;">Welcome to AirSwift!</h1>
