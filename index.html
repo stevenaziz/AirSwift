@@ -13,12 +13,18 @@
           setTimeout(redirect, 1000);
           }
         }
+        function windowChange2() {
+        window.location = "http://stevenaziz2000.github.io/home.html";
+      }
+      
         function redirect() {
           document.getElementById("loadingToHome").style.zIndex = 4;
           document.getElementById("loading").style.zIndex = 5; 
           document.getElementById("SignedIn").style.zIndex = 6;
-          setTimeout(windowChange, 6000);
+          setTimeout(windowChange2, 6000);
           }
+          
+          
       function metaWindow() {
         var x = window.innerWidth;
         var y = window.innerHeight;
