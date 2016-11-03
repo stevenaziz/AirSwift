@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="/stylesheets/AirSwift.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
-    //ad option to stay signed in; fix loader; 
       function staySignedIn() {
         if (document.getElementById("StaySignedIn").checked = false) {
         }
@@ -59,10 +58,6 @@
       function windowChange() {
         window.location = "http://stevenaziz2000.github.io/home.html";
       }
-      
-      function refocus() {
-        document.getElementById("passwordInput").autofocus; 
-      }
     </script>
     <style>
       @font-face {
@@ -108,7 +103,7 @@
       <h1 style="font-family: myriad pro light, helvetica; font-weight: 100; font-size: 18px; color: black;">Please login</h1>
       <form method="post" name="login">
         Password: 
-       <input type="password" onblur="refocus()" oninput="passwordCheck()" maxlength="18" size="18" autofocus placeholder="e.g. smartcat45" id="passwordInput" name="passwordInput">
+       <input type="password" oninput="passwordCheck()" maxlength="18" size="18" placeholder="e.g. smartcat45" id="passwordInput" name="passwordInput">
          <img src="http://stevenaziz2000.github.io/checkmark.png" id="checkmark" style="margin: 0px; border-style: none; padding: 0px; width: 18px; height: 18px; position: relative; right: 0px; top: 4px; opacity: 0;">
         <br> 
         <input type="checkbox" onfocus="staySignedIn()" name="staySignedIn" id="StaySignedIn">
