@@ -6,21 +6,7 @@
     <link rel="shortcut icon" href="/stylesheets/AirSwift.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
-      function staySignedIn() {
-        if (document.getElementById("StaySignedIn").checked = false) {
-        }
-        else {
-          document.cookie("AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2035 03:00:00 UTC";
-        }
-      }
-     
-      function getCookie() {
-        if (document.cookie.indexOf("AirSwiftCookie=") == -1) {
-          } else {
-          setTimeout(redirect, 1000);
-          }
-        }
-        function windowChange2() {
+      function windowChange2() {
         window.location = "http://stevenaziz2000.github.io/home.html";
       }
       
@@ -30,34 +16,47 @@
           document.getElementById("SignedIn").style.zIndex = 6;
           setTimeout(windowChange2, 6000);
           }
-          
-          
-      function metaWindow() {
-        var x = window.innerWidth;
-        var y = window.innerHeight;
-        //document.getElementById("loader").style.top = (y/2)-60 + "px";
-        //document.getElementById("loader").style.left = (x/2)-60 + "px";
+
+       function getCookie() {
+        if (document.cookie.indexOf("AirSwiftCookie=") == -1) {
+          } else {
+          setTimeout(redirect, 1000);
+          }
+        }
+     
+      function staySignedIn() {
+        if (document.getElementById("StaySignedIn").checked = false) {
+        }
+        else {
+          document.cookie("AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2035 03:00:00 UTC";
+        }
       }
+                          
+      function windowChange() {
+        window.location = "http://stevenaziz2000.github.io/home.html";
+      }
+          
+      function loading() {
+        document.getElementById("loadingToHome").style.zIndex = 4;
+        document.getElementById("loading").style.zIndex = 5;
+        setTimeout(windowChange, 1500);
+      }
+ 
       function passwordCheck() {
         if (document.getElementById("passwordInput").value != "AESLM") {
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
         } else {
           document.cookie = "AirSwiftCookie=Authorized";
-          document.getElementById("secureLogin").style.height = "100px";
+          document.getElementById("secureLogin").style.height = "125px";
           document.getElementById("errorMessage").innerHTML = "";
           document.getElementById("checkmark").style.opacity = 1;
           setTimeout(loading, 3000);
         }
       }
-      function loading() {
-        document.getElementById("loadingToHome").style.zIndex = 4;
-        document.getElementById("loading").style.zIndex = 5;
-        setTimeout(windowChange, 1500);
-      }
-      function windowChange() {
-        window.location = "http://stevenaziz2000.github.io/home.html";
-      }
+        
+        var x = window.innerWidth;
+        var y = window.innerHeight;
     </script>
     <style>
       @font-face {
@@ -67,7 +66,7 @@
     </style>
   </head>
   
-  <body onload="getCookie(); metaWindow();" style="margin: 0px; padding: 0px;">
+  <body onload="getCookie()" style="margin: 0px; padding: 0px;">
     <div id="loadingToHome" style="background-color: black; position: absolute; top: 0px; left: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; border-style: none; padding: 0px; opacity: 0.85;"></div>
     <div id="loading" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 2; opacity: 1;">
     <style>
