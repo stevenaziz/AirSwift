@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
     //ad option to stay signed in; fix loader; 
+      function staySignedIn() {
+        if (document.getElementById("StaySignedIn").checked = false) {
+        }
+        else {
+          document.cookie("AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2035 03:00:00 UTC";
+        }
+      }
+     
       function getCookie() {
         if (document.cookie.indexOf("AirSwiftCookie=") == -1) {
           } else {
@@ -33,7 +41,7 @@
       }
       function passwordCheck() {
         if (document.getElementById("passwordInput").value != "AESLM") {
-          document.getElementById("secureLogin").style.height = "150px";
+          document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
         } else {
           document.cookie = "AirSwiftCookie=Authorized";
@@ -96,15 +104,15 @@
 <div style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 3; opacity: 1; background: linear-gradient(to right, rgba(255, 32, 0, 1) 0%, rgba(255, 68, 0, 1) 25%, rgba(255, 104, 0, 1) 50%, rgba(255, 140, 0, 1) 75%, rgba(255, 176,0, 1) 100%);">
     <h1 style="font-family: myriad pro light, helvetica; font-size: 60px; color: white; font-weight: 100; text-align: center; opacity: 0.95; margin: 30px 0px 15px 0px;">Welcome to AirSwift!</h1>
       
-    <div id="secureLogin" style="background-color: rgba(255, 255, 255, 0.75); margin: 90px auto 50px auto; border-style: none; padding: 6px 9px 6px 9px; width: 300px; height: 100px;">
+    <div id="secureLogin" style="background-color: rgba(255, 255, 255, 0.75); margin: 90px auto 50px auto; border-style: none; padding: 6px 9px 6px 9px; width: 300px; height: 125px;">
       <h1 style="font-family: myriad pro light, helvetica; font-weight: 100; font-size: 18px; color: black;">Please login</h1>
       <form method="post" name="login">
         Password: 
        <input type="password" onblur="refocus()" oninput="passwordCheck()" maxlength="18" size="18" autofocus placeholder="e.g. smartcat45" id="passwordInput" name="passwordInput">
          <img src="http://stevenaziz2000.github.io/checkmark.png" id="checkmark" style="margin: 0px; border-style: none; padding: 0px; width: 18px; height: 18px; position: relative; right: 0px; top: 4px; opacity: 0;">
-        Stay Signed In
-         <input type="checkbox" oninput="passwordcheck()" name="stay signed in">
-         <h1 style="font-family: myriad pro light, helvetica; font-size: 15px; color: red; font-weight: 100;">Please do not submit</h1> 
+         <input type="checkbox" oninput="staySignedIn()" name="staySignedIn" id="StaySignedIn" value="unchecked">
+         Stay signed in 
+        <h1 style="font-family: myriad pro light, helvetica; font-size: 15px; color: red; font-weight: 100;">Please do not submit</h1> 
       </form>
      
       <p style="font-family: myriad pro light, helvetica; color: red; font-size: 15px;" id="errorMessage"></p>    
