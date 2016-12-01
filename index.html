@@ -52,7 +52,7 @@
        <input type="password" oninput="passwordCheck()" maxlength="18" size="18" placeholder="e.g. smartcat45" id="passwordInput" name="passwordInput">
          <img src="http://stevenaziz2000.github.io/checkmark.png" id="checkmark" style="margin: 0px; border-style: none; padding: 0px; width: 18px; height: 18px; position: relative; right: 0px; top: 4px; opacity: 0;">
         <br> 
-        <input type="checkbox" onfocus="staySignedIn()" name="staySignedIn" id="StaySignedIn">
+        <input type="checkbox" name="staySignedIn" id="staySignedIn">
          Stay signed in 
         <h1 style="font-family: myriad pro light, helvetica; font-size: 15px; color: red; font-weight: 100;">Please do not submit</h1> 
       </form>
@@ -69,13 +69,18 @@
         if (document.getElementById("passwordInput").value != "AESLM") {
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
+        } else if (document.getElementById("StaySignedIn").checked = true) {
+          document.cookie = "AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2017 03:00:00 UTC; path=/";
+          document.getElementById("secureLogin").style.height = "125px";
+          document.getElementById("errorMessage").innerHTML = "";
+          document.getElementById("checkmark").style.opacity = 1;
+          setTimeout(loading, 3000);
         } else {
           document.cookie = "AirSwiftCookie=Authorized";
           document.getElementById("secureLogin").style.height = "125px";
           document.getElementById("errorMessage").innerHTML = "";
           document.getElementById("checkmark").style.opacity = 1;
           setTimeout(loading, 3000);
-        }
       }
       
       function loading() {
@@ -87,17 +92,9 @@
       function windowChange() {
         window.location = "http://stevenaziz2000.github.io/home.html";
       }
-          
-      function staySignedIn() {
-        if (document.getElementById("StaySignedIn").checked = false) {
-        }
-        else {
-          document.cookie = "AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2017 03:00:00 UTC";
-        }
-      }
      
        function getCookie() {
-        if (document.cookie.indexOf("AirSwiftCookie=") == -1) {
+        if (document.cookie.indexOf("AirSwiftCookie=Authorized") == -1) {
           } else {
           setTimeout(redirect, 1000);
           }
