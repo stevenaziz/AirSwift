@@ -64,7 +64,23 @@
     <script>
        var x = window.innerWidth;
        var y = window.innerHeight;
-
+      
+      function signingIn() {
+          if (document.getElementById("StaySignedIn").checked = true) {
+          document.cookie = "AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2017 03:00:00 UTC; path=/";
+          document.getElementById("secureLogin").style.height = "125px";
+          document.getElementById("errorMessage").innerHTML = "";
+          document.getElementById("checkmark").style.opacity = 1;
+          setTimeout(loading, 3000);
+        } else {
+          document.cookie = "AirSwiftCookie=Authorized";
+          document.getElementById("secureLogin").style.height = "125px";
+          document.getElementById("errorMessage").innerHTML = "";
+          document.getElementById("checkmark").style.opacity = 1;
+          setTimeout(loading, 3000);
+        }
+      }
+      
       function passwordCheck() {
         if (document.getElementById("passwordInput").value != "AESLM") {
           document.getElementById("secureLogin").style.height = "175px";
