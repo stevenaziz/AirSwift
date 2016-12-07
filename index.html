@@ -86,11 +86,7 @@
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
         } else {
-          signingIn();
-        }
-      }
-
-      function signingIn() {
+          function signingIn() {
           if (document.getElementById("StaySignedIn").checked = true) {
           document.cookie = "AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2017 03:00:00 UTC; path=/";
           document.getElementById("secureLogin").style.height = "125px";
@@ -103,6 +99,8 @@
           document.getElementById("errorMessage").innerHTML = "";
           document.getElementById("checkmark").style.opacity = 1;
           setTimeout(loading, 3000);
+        }
+          signingIn();
         }
       }
       
