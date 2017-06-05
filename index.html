@@ -63,6 +63,7 @@
   </head>
   
   <body onload="getCookie();" style="margin: 0px; padding: 0px;">
+   
     <div id="loadingToHome" style="background-color: black; position: absolute; top: 0px; left: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; border-style: none; padding: 0px; opacity: 0.85;"> </div>
     <div id="loading" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 2; opacity: 1;">
     <style>
@@ -85,12 +86,13 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-</style>      
+</style>  
 <div id="loader" style='margin: 100px auto 100px auto; border-style: none; padding: 0px; opacity: 1;' class="loader"> </div>
-<div id="signedIn" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 2; opacity: 1;">
-<h1 style="margin: 30px 0px 0px 0px; text-align: center; border-style: none; padding: 0px; font-weight: 100; font-family: myriad pro light; font-size: 60px; color: white;">OOps! It looks like you are already signed in. You are being redirected now...</h1>
-</div>
-    </div>      
+<div id="signedIn" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; opacity: 1;">
+<h1 style="margin: 30px 0px 0px 0px; text-align: center; border-style: none; padding: 0px; font-weight: 100; font-family: myriad pro light; font-size: 60px; color: white;">OOps! It looks like you are already signed in. You are being redirected now...</h1></div>
+    </div>    
+    
+    
 <div style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 3; opacity: 1; background: linear-gradient(to right, rgba(255, 32, 0, 1) 0%, rgba(255, 68, 0, 1) 25%, rgba(255, 104, 0, 1) 50%, rgba(255, 140, 0, 1) 75%, rgba(255, 176,0, 1) 100%);">
     <h1 style="font-family: myriad pro light, helvetica; font-size: 60px; color: white; font-weight: 100; text-align: center; opacity: 0.95; margin: 30px 0px 15px 0px;">Welcome to AirSwift!</h1>
       
@@ -98,7 +100,7 @@
       <h1 style="font-family: myriad pro light, helvetica; font-weight: 100; font-size: 18px; color: black;">Please login</h1>
       <form method="post" name="login">
         Password: 
-       <input type="password" oninput="passwordCheck()" maxlength="18" size="18" placeholder="e.g. smartcat45" id="passwordInput" name="passwordInput">
+       <input type="password" oninput="passwordCheck();" maxlength="18" size="18" placeholder="e.g. purpletiger90" id="passwordInput" name="passwordInput">
          <img src="http://stevenaziz2000.github.io/checkmark.png" id="checkmark" style="margin: 0px; border-style: none; padding: 0px; width: 18px; height: 18px; position: relative; right: 0px; top: 4px; opacity: 0;">
         <br> 
         <input type="checkbox" name="staySignedIn" id="staySignedIn">
