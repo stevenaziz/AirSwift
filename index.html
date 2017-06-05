@@ -16,31 +16,40 @@
        var x = window.innerWidth;
        var y = window.innerHeight;
       
-      function createCookie() {
-          document.cookie = "AirSwiftCookie=Authorized";
-           window.location = "http://stevenaziz2000.github.io/home.html";
-        }     
+       function getCookie() {
+        if (document.cookie.indexOf("AirSwiftCookie=Authorized") == -1) {
+          } else {
+          setTimeout(redirect, 1000);
+          }
+        }
       
+      function redirect() {
+          document.getElementById("loadingToHome").style.zIndex = 4;
+          document.getElementById("loading").style.zIndex = 5; 
+          document.getElementById("SignedIn").style.zIndex = 6;
+          setTimeout(windowChange, 6000);
+          }
+      
+       function windowChange() {
+        window.location = "http://stevenaziz2000.github.io/home.html";
+      }
+         
       function passwordCheck() {
         if (document.getElementById("passwordInput").value != "AESLM") {
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
-        } else {
-          function signingIn() {
-          if (document.getElementById("StaySignedIn").checked = true) {
-          document.cookie = "AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2017 03:00:00 UTC; path=/";
+        } else if (document.getElementById("StaySignedIn").checked = true) {
+          document.cookie = "AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2017 03:00:00 UTC; path=/;";
           document.getElementById("secureLogin").style.height = "125px";
-          document.getElementById("errorMessage").innerHTML = "";
+          document.getElementById("errorMessage").innerHTML = " ";
           document.getElementById("checkmark").style.opacity = 1;
           setTimeout(loading, 3000);
         } else {
           document.cookie = "AirSwiftCookie=Authorized";
           document.getElementById("secureLogin").style.height = "125px";
-          document.getElementById("errorMessage").innerHTML = "";
+          document.getElementById("errorMessage").innerHTML = " ";
           document.getElementById("checkmark").style.opacity = 1;
           setTimeout(loading, 3000);
-        }
-          signingIn();
         }
       }
       
@@ -49,29 +58,11 @@
         document.getElementById("loading").style.zIndex = 5;
         setTimeout(windowChange, 1500);
       }
-                      
-      function windowChange() {
-        window.location = "http://stevenaziz2000.github.io/home.html";
-      }
-     
-       function getCookie() {
-        if (document.cookie.indexOf("AirSwiftCookie=Authorized") == -1) {
-          } else {
-          setTimeout(redirect, 1000);
-          }
-        }
-          
-      function redirect() {
-          document.getElementById("loadingToHome").style.zIndex = 4;
-          document.getElementById("loading").style.zIndex = 5; 
-          document.getElementById("SignedIn").style.zIndex = 6;
-          setTimeout(windowChange2, 6000);
-          }
         
     </script>
   </head>
   
-  <body onload="createCookie();" style="margin: 0px; padding: 0px;">
+  <body onload="getCookie();" style="margin: 0px; padding: 0px;">
 <script>
    function getCookie() {
           document.cookie = "AirSwiftCookie=Authorized";
