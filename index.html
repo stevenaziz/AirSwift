@@ -35,10 +35,11 @@
       }
          
       function passwordCheck() {
+        var a = document.getElementById("StaySignedIn").checked;
         if (document.getElementById("passwordInput").value != "AESLM") {
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
-        } else if (document.getElementById("StaySignedIn").checked = true) {
+        } else if (a = "true") {
           document.cookie = "AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2017 03:00:00 UTC; path=/;";
           document.getElementById("secureLogin").style.height = "125px";
           document.getElementById("errorMessage").innerHTML = " ";
