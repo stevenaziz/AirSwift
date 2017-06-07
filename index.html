@@ -75,6 +75,7 @@
         }
       
       function redirect() {
+          document.getElementById("scrim").autofocus();
           document.getElementById("scrim").style.zIndex = 7;
           document.getElementById("loader").style.opacity = 1; 
           document.getElementById("confirmation").style.zIndex = 9;
@@ -95,16 +96,19 @@
       function passwordCheck() {
         var a = document.getElementById("staySignedIn").checked;
         if (document.getElementById("passwordInput").value != "AESLM") {
+          document.getElementById("body").autofocus();
           document.getElementById("secureLogin").style.height = "230px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
         } else if (a = "true") {
           document.cookie = "AirSwiftCookie=Authorized; expires=Sat, 08 Dec 2018 03:00:00 UTC; path=/;";
+          document.getElementById("scrim").autofocus();
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = " ";
           document.getElementById("checkmark").style.opacity = 0.5;
           setTimeout(redirectIn, 1500);
         } else {
           document.cookie = "AirSwiftCookie=Authorized";
+          document.getElementById("scrim").autofocus();
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = " ";
           document.getElementById("checkmark").style.opacity = 0.5;
