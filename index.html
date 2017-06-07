@@ -41,6 +41,10 @@
       function adapt() {
         if (y < 360) {
           document.getElementById("body").style.height = "480px";
+          document.getElementById("scrim").style.height = "480px";
+        } else {
+          document.getElementById("body").style.height = "100%";
+          document.getElementById("scrim").style.height = "100%";
         }
       }
       
@@ -91,14 +95,16 @@
     </script>
   </head>
   
-  <body onload="getCookie(); adapt();" style="margin: 0px; padding: 0px;">
-    <div id="scrim" style="background-color: black; position: absolute; top: 0px; left: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; border-style: none; padding: 0px; opacity: 0.90;"><div id="loader" style="margin: 0px; position: absolute; top: 30%; left: 45%; opacity: 0; z-index: 8;" class="loader"></div></div>
+  <body onload="getCookie(); adapt();" onresize="adapt();" style="margin: 0px; padding: 0px;">
+    <div id="scrim" style="background-color: black; position: absolute; top: 0px; left: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; border-style: none; padding: 0px; opacity: 0.90;">
+      <div id="loader" style="margin: 0px; position: absolute; top: 30%; left: 45%; opacity: 0; z-index: 8;" class="loader"></div>
+    </div>
     
     <div id="confirmation" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; opacity: 1; z-index: 3;">
       <h1 style="margin: 30px 0px 0px 0px; text-align: center; border-style: none; padding: 0px; font-weight: 100; font-family: myriad pro light; font-size: 60px; color: white;">It looks like you are already signed in. You are being redirected now...</h1> 
     </div>
     <div id="signedIn" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; opacity: 1; z-index: 3;">
-      <h1 style="margin: 30px 0px 0px 0px; text-align: center; border-style: none; padding: 0px; font-weight: 100; font-family: myriad pro light; font-size: 60px; color: white;">You are being signed in...</h1> 
+      <h1 style="margin: 30px 0px 15px 0px; text-align: center; border-style: none; padding: 0px; font-weight: 100; font-family: myriad pro light; font-size: 60px; color: white;">You are being signed in...</h1> 
     </div>
        
 <div id="body" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 4; opacity: 1; background: linear-gradient(to right, rgba(255, 32, 0, 1) 0%, rgba(255, 68, 0, 1) 25%, rgba(255, 104, 0, 1) 50%, rgba(255, 140, 0, 1) 75%, rgba(255, 176,0, 1) 100%);">
