@@ -33,6 +33,13 @@
       .button {
         transition-duration: 0.5s;
         cursor: pointer;
+        border-radius: 12px; 
+        border: 2px solid rgba(255, 32, 0, 1); 
+        text-align: center; 
+        color: rgba(255, 32, 0, 1); 
+        margin: 0px; 
+        padding: 5px; 
+        background-color: white;
       }
       .button:hover {
         background-color: rgba(255, 32, 0, 1);
@@ -127,7 +134,7 @@
         <p style="font-family: myriad pro light, helvetica; font-size: 15px; color: black; font-weight: 100; margin: 15px 0px 3px 0px;">Password: <input type="password" oninput="" maxlength="18" size="18" placeholder="e.g. purpletiger90" id="passwordInput" name="passwordInput"> <img src="http://stevenaziz2000.github.io/checkmark.png" id="checkmark" style="margin: 0px; border-style: none; padding: 0px; width: 18px; height: 18px; position: relative; right: 0px; top: 4px; opacity: 0;"></p> 
         <p style="font-family: myriad pro light, helvetica; font-size: 15px; color: black; font-weight: 100; margin: 3px 0px 3px 0px;"> <input type="checkbox" name="staySignedIn" id="staySignedIn">   Stay signed in</p> 
       </form>
-      <button id="signIn" onclick="passwordCheck()" class="button" style="border-radius: 12px; border: 2px solid rgba(255, 32, 0, 1); text-align: center; color: rgba(255, 32, 0, 1); margin: 0px; padding: 5px; background-color: white;"><p style="font-family: myriad pro light; font-size: 15px; font-wight: 100;">Sign In</p></button>  
+      <button onclick="passwordCheck()" class="button" style="font-family: myriad pro light; font-size: 15px; font-wight: 100;">Sign In</button>  
       <h1 style="font-family: myriad pro light, helvetica; font-size: 15px; color: red; font-weight: 100;">Please DO NOT press enter</h1> 
      
       <p style="font-family: myriad pro light, helvetica; color: red; font-size: 15px;" id="errorMessage"></p>    
