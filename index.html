@@ -35,22 +35,33 @@
     </style>
     
     <script>
-       var x = window.innerWidth;
-       var y = window.innerHeight;
+      var x = window.innerWidth;
+      var y = window.innerHeight;
+      var a = document.getElementById("staySignedIn").checked;
+      var b = document.getElementById("scrim");
+      var c = document.getElementById("loader");
+      var d = document.getElementById("SignedIn");
+      var e = document.getElementById("confirmation");
+      var f = document.getElementById("info");
+      var g = document.getElementById("info2");
+      var h = document.getElementById("body");
+      var i = document.getElementById("welcome");
+      var j = document.getElementById("secureLogin");
+      var k = document.getElementById("prompt");
       
       function adapt() {
         if (y < 360) {
-          document.getElementById("body").style.height = "480px";
-          document.getElementById("scrim").style.height = "480px";
+          h.style.height = "480px";
+          b.style.height = "480px";
         } else {
-          document.getElementById("body").style.height = "100%";
-          document.getElementById("scrim").style.height = "100%";
+          h.style.height = "100%";
+          b.style.height = "100%";
         }
         if (x < 568) {
-          document.getElementById("info").style.fontSize = "30px";
-          document.getElementById("info2").style.fontSize = "30px";
-          document.getElementById("loader").style.width = "60px";
-          document.getElementById("loader").style.height = "60px";
+          f.style.fontSize = "30px";
+          g.style.fontSize = "30px";
+          c.style.width = "60px";
+          c.style.height = "60px";
         }
       }
       
@@ -62,8 +73,8 @@
         }
       
       function redirect() {
-          document.getElementById("scrim").style.zIndex = 7;
-          document.getElementById("loader").style.opacity = 1; 
+          b.style.zIndex = 7;
+          c.style.opacity = 1; 
           document.getElementById("confirmation").style.zIndex = 9;
           setTimeout(windowChange, 3000);
           }
@@ -80,7 +91,6 @@
       }
          
       function passwordCheck() {
-        var a = document.getElementById("staySignedIn").checked;
         if (document.getElementById("passwordInput").value != "AESLM") {
           document.getElementById("secureLogin").style.height = "180px";
           document.getElementById("errorMessage").innerHTML = "The password you entered is not on our database. Please try again.";
@@ -114,9 +124,9 @@
     </div>
        
 <div id="body" style="margin: 0px; border-style: none; padding: 0px; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 4; opacity: 1; background: linear-gradient(to right, rgba(255, 32, 0, 1) 0%, rgba(255, 68, 0, 1) 25%, rgba(255, 104, 0, 1) 50%, rgba(255, 140, 0, 1) 75%, rgba(255, 176,0, 1) 100%);">
-    <h1 style="font-family: myriad pro light, helvetica; font-size: 60px; color: white; font-weight: 100; text-align: center; opacity: 0.95; margin: 30px 0px 15px 0px;">Welcome to AirSwift!</h1>
+    <h1 id="welcome" style="font-family: myriad pro light, helvetica; font-size: 60px; color: white; font-weight: 100; text-align: center; opacity: 0.95; margin: 30px 0px 15px 0px;">Welcome to AirSwift!</h1>
     <div id="secureLogin" style="background-color: rgba(255, 255, 255, 0.75); position: relative; top: 10%; margin: 15px auto 15px auto; border-style: none; padding: 6px 9px 6px 9px; width: 300px; height: 125px; z-index: 5;">
-      <h1 style="font-family: myriad pro light, helvetica; font-weight: 100; font-size: 18px; color: black;">Please login</h1>
+      <h1 id="prompt" style="font-family: myriad pro light, helvetica; font-weight: 100; font-size: 18px; color: black;">Please login</h1>
       <form method="post" name="login">
         <p style="font-family: myriad pro light, helvetica; font-size: 15px; color: black; font-weight: 100; margin: 15px 0px 3px 0px;">Password: <input type="password" oninput="passwordCheck()" maxlength="18" size="18" placeholder="e.g. purpletiger90" id="passwordInput" name="passwordInput"> <img src="http://stevenaziz2000.github.io/checkmark.png" id="checkmark" style="margin: 0px; border-style: none; padding: 0px; width: 18px; height: 18px; position: relative; right: 0px; top: 4px; opacity: 0;"></p> 
         <p style="font-family: myriad pro light, helvetica; font-size: 15px; color: black; font-weight: 100; margin: 3px 0px 3px 0px;"> <input type="checkbox" name="staySignedIn" id="staySignedIn">   Stay signed in</p> 
