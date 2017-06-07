@@ -69,7 +69,8 @@
       
        function getCookie() {
         if (document.cookie.indexOf("AirSwiftCookie=Authorized") == -1) {
-          } else {
+          document.getElementById("passwordInput").focus();
+        } else {
           setTimeout(redirect, 1000);
           }
         }
@@ -104,15 +105,15 @@
           document.getElementById("scrim").focus();
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = " ";
-          document.getElementById("checkmark").style.opacity = 0.5;
-          setTimeout(redirectIn, 1500);
+          //document.getElementById("checkmark").style.opacity = 0.5;
+          setTimeout(redirectIn, 1);
         } else {
           document.cookie = "AirSwiftCookie=Authorized";
           document.getElementById("scrim").focus();
           document.getElementById("secureLogin").style.height = "175px";
           document.getElementById("errorMessage").innerHTML = " ";
-          document.getElementById("checkmark").style.opacity = 0.5;
-          setTimeout(redirectIn, 1500);
+          //document.getElementById("checkmark").style.opacity = 0.5;
+          setTimeout(redirectIn, 1);
         }
       }
     </script>
