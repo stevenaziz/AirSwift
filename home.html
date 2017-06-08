@@ -5,7 +5,7 @@
     <title>AirSwift</title>
     <link rel="shortcut icon" href="/stylesheets/AirSwift.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/stylesheets/text.css">
+    <link rel="stylesheet" href="">
     <style>
       ul {
       list-style-type: none;
@@ -53,25 +53,31 @@
       }
     </style>
     <script>
+      var x = window.innerWidth;
+      
       function getCookie() {
         if (document.cookie.indexOf("AirSwiftCookie=") == -1) {
            window.location = "http://stevenaziz2000.github.io/index.html";
-         } else {
-        }
+         } 
       }
-    </script>
-    <script>
-      function logout() {
+       function resize() {
+      if (window.innerWidth < 749) {
+      document.getElementById("title").style.fontSize = "40px";
+      document.getElementById("title2").style.fontSize = "18px";
+      } else {
+      document.getElementById("title").style.fontSize = "80px";
+      document.getElementById("title2").style.fontSize = "35px";
+      }
+    }
+      
+       function logout() {
         document.cookie = "AirSwiftCookie=Authorized; expires=Fri, 08 Dec 2000 03:00:00 UTC";
         window.location = "http://stevenaziz2000.github.io/";
       }
     </script>
   </head>
   
-  <body onload="getCookie()" style="margin: 0px; padding: 0px;" onresize="resize()" id="body">
-  <script>
-      var x = window.innerWidth; 
-    </script>
+  <body onload="getCookie();" style="margin: 0px; padding: 0px;" onresize="resize();" id="body">
     <ul style="height: 40px; background: linear-gradient(to right, rgba(255, 32, 0, 0.95), rgba(255, 176,0, 1));">
       <li><a class="active" href="http://stevenaziz2000.github.io/home.html"><h1 style="font-family: helvetica; font-size: 18px; color: white; font-weight: 100; margin: 0px; padding: 12px 0px 0px 30px;">AirSwift</h1></a></li>
       <ul style="float:right;list-style-type:none;">
@@ -100,18 +106,6 @@
      
     <div style="background-color: rgb(40,40,40); float: right; border-style: none; margin: 50px 0px 0px 0px; padding: 20px 50px 20px 20px; width: 539px; height: 140px;"><h3 style="font-family: helvetica; font-size: 20px; color: white; text-align-right; margin: 0px 0px 0px 0px; padding: 0px;" id = "float">Total Silence Drives You Crazy</h3><h6 style="font-family: helvetica; font-size: 15px; color: white; text-align-right; margin: 0px 0px 0px 0px; padding: 0px;">By DNews</h6><p style="font-family: helvetica; font-size: 15px; color: white; text-align-left; margin: 15px 0px 0px 0px; padding: 0px;"><b>Published on Mar 10, 2013.</b> Silence is golden, but can also drive you crazy! Chances are you've never experienced absolute quiet, but those who have report hallucinations and feelings of insanity. Laci Green tells us why and how this can happen.
     </p></div>
-
-    <script>
-    function resize() {
-      if (window.innerWidth < 749) {
-      document.getElementById("title").style.fontSize = "40px";
-      document.getElementById("title2").style.fontSize = "18px";
-      } else {
-      document.getElementById("title").style.fontSize = "80px";
-      document.getElementById("title2").style.fontSize = "35px";
-      }
-    }
-    </script>
     
     <div style="width: 100%; height: 50px; border-style: none; background: linear-gradient(to right, rgba(255, 32, 0, 0.95), rgba(255, 176,0, 1)); margin: 70px 0px 30px 0px; padding: 0px; float: left;"><h4 style="padding: 22px 0px 22px 11px; font-weight: 100; font-size: 16px; font-family: myriad pro light, helvetica; color: white; text-align: left; margin: 0px; border-style: none;">copyright &copy; 2016 AirSwift Inc. All rights reserved.</h4></div>
   </body>
