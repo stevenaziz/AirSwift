@@ -54,8 +54,10 @@
     </style>
     <script>
       var x = window.innerWidth;
+      var y = window.innerHeight;
       
       function getCookie() {
+        document.getElementById("coverSheet").height = y + "px";
         if (document.cookie.indexOf("AirSwiftCookie=") == -1) {
            window.location = "http://stevenaziz2000.github.io/index.html";
          } else {
@@ -84,7 +86,7 @@
   </head>
   
   <body onload="getCookie(); resize();" style="margin: 0px; padding: 0px;" onresize="resize()" id="body">
-    <div id="coverSheet" style="width: 100%; height: 100%; background-color: white; z-index: 100;"> </div>
+    <div id="coverSheet" style="width: 100%; background-color: white; z-index: 100;"> </div>
       <ul style="padding: 12px; background: linear-gradient(to right, rgba(255, 32, 0, 0.95), rgba(255, 176,0, 1));">
       <li style="position: absolute; left: 28%;"><a href="http://stevenaziz2000.github.io/home.html">
         <h1 style="font-family: helvetica; font-size: 18px; color: white; font-weight: 100; margin: 0px; padding: 0px;">AirSwift</h1>
