@@ -29,13 +29,15 @@
      
       li.dropdown {
       display: inline-block;
+      position: relative;
       }
       .dropdown-content {
       display: none;
-      position: relative;
+      position: absolute;
       background-color: rgb(255, 255, 255);
       min-width: 170px;
       box-shadow: none;
+      z-index: 10;
       }
       .dropdown-content a {
       color: black;
