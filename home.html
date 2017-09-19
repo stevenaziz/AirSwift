@@ -76,6 +76,12 @@
           document.getElementById("title").style.fontSize = e + "px";
           document.getElementById("title2").style.fontSize = f + "px";
           setTimeout(resize, 100);
+          
+         var h = x / 1080 * 270
+          if (h > 270) {
+            var h = 270;
+          }
+         document.getElementById("background").height = h + "px";
         }
       
        function logout() {
@@ -118,7 +124,7 @@
       </ul>
     </ul>
     
-    <div style="width: 100%; background-image: url(stevenaziz2000.github.io/stylesheets/Mountains.Night.Sky.jpeg); height: 270px;">
+    <div id="background" style="width: 100%; background-image: url(stevenaziz2000.github.io/stylesheets/Mountains.Night.Sky.jpeg); height: 270px;">
       <h1 style="font-weight: bold; color: white; text-align: center; font-family: helvetica; margin: 0px; padding: 50px 0px 0px 0px;" id="title">Welcome to AirSwift!</h1>
       <h4 style="font-weight: bold; color: white; text-align: center; font-family: helvetica; margin: 0px; padding: 0px;" id="title2">You'll learn something new. We promise.</h4></div>
     
